@@ -1,0 +1,347 @@
+* {
+    box-sizing: border-box
+}
+
+html {
+    font-size: 10px;
+    font-size: 62.5%
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+    background-color: #fff
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch
+}
+
+/*for Text*/
+
+header {
+    display: block;
+    width: 100%;
+    background-color: #006ac3
+}
+
+@media (min-width:639px) and (max-width:1200px) {
+    p {
+        font-size: calc(1.6rem + (18 - 16) * ((100vw - 639px)/ (1200 - 639)));
+        line-height: calc(2.4rem + (27 - 24) * ((100vw - 639px)/ (1200 - 639)));
+    }
+}
+
+@media (min-width:1200px) {
+    p {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width:639px) {
+    p {
+        font-size: 1.6rem;
+        line-height: 2.4rem
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: -.05em;
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+.bold,
+.text-bold,
+strong {
+    font-weight: 500
+}
+
+section .section-inner {
+    max-width: 1200px;
+    padding: 15px;
+    margin: 0 auto
+}
+
+section.section-black {
+    background-color: rgba(48, 48, 48);
+    color: #ffff;
+    text-align: center;
+}
+
+/*paddings and margins*/
+
+.mar-top-0 {
+    margin-top: 0px !important;
+}
+
+
+.mar-bot-qtr {
+    margin-bottom: 5px;
+}
+
+
+.pad-bot-dbl {
+    padding-bottom: 50px !important;
+}
+
+.pad-bot {
+    padding-bottom: 20px !important;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto
+}
+
+/*Grids*/
+
+.grid,
+.unit {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: block;
+    clear: both;
+}
+
+.grid .unit {
+    float: left;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Clearfix after every .grid */
+
+.grid {
+    *zoom: 1;
+}
+
+.grid:before,
+.grid:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.grid:after {
+    clear: both;
+}
+
+.grid .whole {
+    width: 100%;
+}
+
+
+.grid .one-third {
+    width: 33.3332%;
+}
+
+.grid .two-fifths {
+    width: 47%;
+}
+
+.grid .three-fifths {
+    width: 53%;
+}
+
+/* Responsive for vr picture */
+
+@media screen and (max-width: 768px) {
+    .vr-response {
+        width: 1000px !important;
+    }
+
+    .grid .unit {
+        width: 100% !important;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .unit .grid .unit {
+        width: 100% !important;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+/* Expand the wrap a bit when on larger screens */
+
+@media screen and (min-width: 1180px) {
+    .grid {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+}
+
+/*width for hologram picture*/
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    img.mobile-only-img {
+        display: none !important;
+    }
+    img.tablet-only-img {
+        display: none !important;
+
+    }
+    img.desktop-only-img {
+        width: 100%;
+    }
+}
+
+/*for Mobile*/
+
+@media screen and (max-width: 425px) {
+    .mob-mar-top-qtr {
+        margin-top: 10px !important;
+    }
+
+    .mobile-pad-lf-0 {
+        padding-left: 10px !important;
+        padding-right: 0px !important;
+    }
+
+    img.mobile-only-img {
+        width: 100%;
+    }
+    img.tablet-only-img {
+        display: none !important;
+    }
+    img.desktop-only-img {
+        display: none !important;
+    }
+}
+
+/*for tablet*/
+
+@media screen and (min-width: 426px) and (max-width: 758px) {
+
+    .mob-mar-top-qtr {
+        margin-top: 10px !important;
+    }
+    img.mobile-only-img {
+        display: none !important;
+    }
+    img.tablet-only-img {
+        width: 100%;
+    }
+    img.desktop-only-img {
+        display: none !important;
+    }
+}
+
+/*for desktop*/
+
+@media screen and (min-width: 769px) {
+
+    .mar-bot-dbl {
+        margin-bottom: 60px;
+    }
+    img.mobile-only-img {
+        display: none !important;
+    }
+    img.tablet-only-img {
+        display: none !important;
+    }
+    img.desktop-only-img {
+        width: 60%;
+    }
+}
+
+/*width for range 758 to 758 for tablet*/
+
+@media screen and (min-width: 758px) and (max-width: 768px) {
+
+
+    img.mobile-only-img {
+        display: none !important;
+    }
+    img.tablet-only-img {
+        width: 100%;
+    }
+    img.desktop-only-img {
+        display: none !important;
+    }
+}
+
+/**this is for the hologram picture*/
+
+.wrapper {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.column {
+    flex: 1;
+    margin: 20px;
+    padding: 10px;
+    &:first-child {
+        margin-left: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .columns .column {
+        margin-bottom: 5px;
+        flex-basis: 40%;
+        &:nth-last-child(2) {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .columns .column {
+        flex-basis: 100%;
+        margin: 0 0 5px 0;
+    }
+}
+
+/*for the image  in footer*/
+
+@media screen and (max-width: 425px) {
+
+    .footer-img {
+        height: 200px !important;
+    }
+}
